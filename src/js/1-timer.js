@@ -63,7 +63,7 @@ class Timer {
                 iziToast.info({
                     message: 'Countdown finished',
                     position: 'topRight',
-                    backgroundColor: '#63ef40ff',
+                    backgroundColor: '#59a10d',
                     color: '#ffffff',
                 });
                 return;

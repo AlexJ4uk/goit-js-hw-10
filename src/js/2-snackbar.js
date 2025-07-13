@@ -24,16 +24,20 @@ promise
     .then((delay) => {
     iziToast.success({
         title: "Success",
-        message: `✅ Fulfilled promise in ${delay}ms`,
-        position: "topRight",
+        message: `Fulfilled promise in ${delay}ms`,
+        position: 'topRight',
+        backgroundColor: '#59a10d',
+        color: '#ffffff',
         close: false,
     });
     })
     .catch((delay) => {
         iziToast.error({
         title: "Error",
-        message: `❌ Rejected promise in ${delay}ms`,
-        position: "topRight",
+        message: `Rejected promise in ${delay}ms`,
+        position: 'topRight',
+        backgroundColor: '#ef4040',
+        color: '#ffffff',
         close: false,
     });
     });
