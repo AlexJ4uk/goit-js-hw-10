@@ -8,21 +8,41 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="container snackbar-wrap">
         <a class="back-link" href="./index.html">Go back</a>
         <h1 class="main-title">Snackbar</h1>
 
-        <!-- <form class="feedback-form" autocomplete="off">
+        <form class="form">
           <label>
-            Email
-            <input type="email" name="email" autofocus />
+            Delay (ms)
+            <input type="number" name="delay" required />
           </label>
-          <label>
-            Message
-            <textarea name="message" rows="8"></textarea>
-          </label>
-          <button type="submit">Submit</button>
-        </form> -->
+          <fieldset class="radio-group">
+            <legend>State</legend>
+            <label>
+              <input
+                class="fulfilled-radio"
+                type="radio"
+                name="state"
+                value="fulfilled"
+                required
+              />
+              Fulfilled
+            </label>
+            <label>
+              <input
+                class="rejected-radio"
+                type="radio"
+                name="state"
+                value="rejected"
+                required
+              />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button type="submit">Create notification</button>
+        </form>
       </div>
     </main>
     <script type="module" src="./js/2-snackbar.js"></script>

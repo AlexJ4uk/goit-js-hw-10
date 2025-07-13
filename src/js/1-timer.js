@@ -1,6 +1,10 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+
+
 const startBtn = document.querySelector("button[data-start]");
 const secondsEl = document.querySelector("[data-seconds]");
 const minutesEl = document.querySelector("[data-minutes]");
@@ -22,7 +26,12 @@ const options = {
         const selectedDate = selectedDates[0];
         
         if (selectedDate <= new Date()) {
-            window.alert("Please choose a date in the future");
+            iziToast.error({
+                message: 'Please choose a date in the future',
+                position: 'topRight',
+                backgroundColor: '#ef4040',
+                color: '#ffffff',
+    });
             startBtn.disabled = true;
             return;
         }
@@ -49,7 +58,14 @@ class Timer {
             if (deltaTime <= 0) {
                 clearInterval(this.intervalId);
                 this.updateTimerDisplay(0, 0, 0, 0);
-                window.alert("Countdown finished");
+                dateTimePicker.disabled = false;
+                startBtn.disabled = true;
+                iziToast.info({
+                    message: 'Countdown finished',
+                    position: 'topRight',
+                    backgroundColor: '#63ef40ff',
+                    color: '#ffffff',
+                });
                 return;
             }
             

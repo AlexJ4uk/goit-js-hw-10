@@ -4,15 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="container timer-wrap">
         <a class="back-link" href="./index.html">Go back</a>
         <h1 class="main-title">Timer</h1>
-        <input type="text" id="datetime-picker" />
-        <button type="button" data-start>Start</button>
+        <div class="input-container">
+          <input type="text" id="datetime-picker" />
+          <button type="button" data-start>Start</button>
+        </div>
 
         <div class="timer">
           <div class="field">
@@ -34,6 +40,7 @@
         </div>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
     <script type="module" src="./js/1-timer.js"></script>
   </body>
 </html>
